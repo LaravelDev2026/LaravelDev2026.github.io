@@ -5,55 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Independent Laravel / PHP Developer</title>
 <style>
-  /* General body styling */
+  /* Basic reset & typography */
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa;
-    color: #212529;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
-  }
-
-  /* Container for content */
-  .container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  }
-
-  h1 {
-    color: #0d6efd;
-    font-size: 2rem;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-
-  h2 {
-    color: #495057;
-    font-size: 1.2rem;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-    border-bottom: 2px solid #0d6efd;
-    padding-bottom: 5px;
-  }
-
-  ul {
-    margin-left: 20px;
-    list-style-type: disc;
-  }
-
-  p {
-    margin: 0.5em 0;
-  }
-
-  .contact {
-    margin-top: 2em;
-    padding-top: 1em;
-    border-top: 1px solid #dee2e6;
+    background: #f8f9fa;
+    color: #212529;
+    line-height: 1.6;
   }
 
   a {
@@ -65,47 +24,167 @@
     text-decoration: underline;
   }
 
-  /* Mobile responsiveness tweaks */
-  @media(max-width: 500px){
-    .container {
-      margin: 20px;
-      padding: 15px;
-    }
-    h1 {
-      font-size: 1.6rem;
-    }
+  /* Container */
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+    color: #0d6efd;
+    margin-bottom: 10px;
+  }
+  .hero p {
+    font-size: 1.2rem;
+    color: #495057;
+  }
+
+  /* Section styling */
+  section {
+    margin-top: 40px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+
+  h2 {
+    border-bottom: 2px solid #0d6efd;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    color: #212529;
+  }
+
+  ul {
+    margin-left: 20px;
+  }
+
+  /* Tech stack badges */
+  .tech-badges span {
+    display: inline-block;
+    background: #0d6efd;
+    color: white;
+    padding: 5px 10px;
+    margin: 3px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+  }
+
+  /* Projects grid */
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  .project-card {
+    background: #f1f3f5;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  .project-card h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    color: #0d6efd;
+  }
+
+  /* Contact */
+  .contact {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+  }
+  .contact p {
+    font-size: 1rem;
+  }
+
+  @media(max-width: 600px){
+    .hero h1 { font-size: 2rem; }
   }
 </style>
 </head>
 <body>
-  <div class="container">
+
+<div class="container">
+
+  <!-- Hero / Intro -->
+  <div class="hero">
     <h1>Independent Laravel / PHP Developer</h1>
-
-    <h2>I focus on:</h2>
-    <ul>
-      <li>Laravel features and bug fixes</li>
-      <li>PHP, JavaScript, jQuery issues</li>
-      <li>Small web features and refactors</li>
-    </ul>
-
-    <h2>I do not handle:</h2>
-    <ul>
-      <li>Hosting or servers</li>
-      <li>Payment processing</li>
-      <li>Infrastructure or deployments</li>
-    </ul>
-
-    <h2>Rate:</h2>
-    <p>£20 / $20 per hour (small tasks welcome)</p>
-
-    <h2>Communication:</h2>
-    <p>Text-based only</p>
-
-    <div class="contact">
-      <h2>Contact</h2>
-      <p>GitHub: <a href="https://github.com/LaravelDev2026">https://github.com/LaravelDev2026</a><br>
-      Email: laraveldev2026@outlook.com</p>
-    </div>
+    <p>Fast, reliable web development from bug fixes to full Laravel apps. Text-based communication only.</p>
   </div>
+
+  <!-- Skills / What I do -->
+  <section>
+    <h2>What I Do</h2>
+    <ul>
+      <li>Laravel development: features, fixes, refactors</li>
+      <li>PHP, JavaScript, jQuery debugging</li>
+      <li>Small web features, landing pages, portfolios</li>
+      <li>Database queries & optimizations (MySQL / MariaDB)</li>
+      <li>Project management support in web development</li>
+    </ul>
+  </section>
+
+  <!-- What I don't do -->
+  <section>
+    <h2>What I Don't Do</h2>
+    <ul>
+      <li>Hosting / server management</li>
+      <li>Payment processing or financial integrations</li>
+      <li>Infrastructure / migrations / deployments</li>
+    </ul>
+  </section>
+
+  <!-- Tech Stack -->
+  <section>
+    <h2>Tech Stack</h2>
+    <div class="tech-badges">
+      <span>Laravel</span>
+      <span>PHP</span>
+      <span>JavaScript</span>
+      <span>jQuery</span>
+      <span>HTML/CSS</span>
+      <span>SQL</span>
+      <span>MariaDB / MySQL</span>
+      <span>Java</span>
+    </div>
+  </section>
+
+  <!-- Sample Projects / Proof -->
+  <section>
+    <h2>Sample Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Bug Fix: Laravel Auth Issue</h3>
+        <p>Fixed session handling and login redirect bug in a legacy Laravel app.</p>
+      </div>
+      <div class="project-card">
+        <h3>Portfolio Landing Page</h3>
+        <p>Created responsive landing page for a freelancer, including contact form and CSS animation.</p>
+      </div>
+      <div class="project-card">
+        <h3>SQL Optimization</h3>
+        <p>Improved query performance and reduced load times for MySQL database on small social app.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <div class="contact">
+    <h2>Contact Me</h2>
+    <p>GitHub: <a href="https://github.com/LaravelDev2026">https://github.com/LaravelDev2026</a></p>
+    <p>Email: laraveldev2026@outlook.com</p>
+    <p>Rate: £20 / $20 per hour (small tasks welcome)</p>
+  </div>
+
+</div>
+
 </body>
 </html>
