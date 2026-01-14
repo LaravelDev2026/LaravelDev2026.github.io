@@ -5,109 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Independent Laravel / PHP Developer</title>
 <style>
-  /* Basic reset & typography */
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f8f9fa;
-    color: #212529;
-    line-height: 1.6;
-  }
+  /* Reset & typography */
+  body { margin:0; padding:0; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#f0f2f5; color:#212529; line-height:1.6; }
+  a { color:#0d6efd; text-decoration:none; }
+  a:hover { text-decoration:underline; }
 
-  a {
-    color: #0d6efd;
-    text-decoration: none;
-  }
+  /* Containers */
+  .container { max-width:1200px; margin:0 auto; padding:20px; }
+  section { margin:40px 0; }
+  
+  /* Hero */
+  .hero { text-align:center; padding:80px 20px; background:#0d6efd; color:white; border-radius:0 0 30px 30px; }
+  .hero h1 { font-size:3rem; margin:0 0 10px; }
+  .hero p { font-size:1.3rem; max-width:800px; margin:0 auto; }
 
-  a:hover {
-    text-decoration: underline;
-  }
+  /* Section styles */
+  h2 { font-size:1.5rem; border-bottom:3px solid #0d6efd; padding-bottom:5px; margin-bottom:20px; color:#0d6efd; }
+  ul { margin-left:20px; }
+  ul li { margin-bottom:10px; }
 
-  /* Container */
-  .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 40px 20px;
-  }
-
-  /* Hero Section */
-  .hero {
-    text-align: center;
-    padding: 40px 20px;
-  }
-  .hero h1 {
-    font-size: 2.5rem;
-    color: #0d6efd;
-    margin-bottom: 10px;
-  }
-  .hero p {
-    font-size: 1.2rem;
-    color: #495057;
-  }
-
-  /* Section styling */
-  section {
-    margin-top: 40px;
-    padding: 20px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  }
-
-  h2 {
-    border-bottom: 2px solid #0d6efd;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-    color: #212529;
-  }
-
-  ul {
-    margin-left: 20px;
-  }
-
-  /* Tech stack badges */
-  .tech-badges span {
-    display: inline-block;
-    background: #0d6efd;
-    color: white;
-    padding: 5px 10px;
-    margin: 3px;
-    border-radius: 6px;
-    font-size: 0.9rem;
-  }
+  /* Tech badges */
+  .tech-badges span { display:inline-block; background:#0d6efd; color:white; padding:6px 12px; margin:4px 4px 4px 0; border-radius:6px; font-size:0.95rem; }
 
   /* Projects grid */
-  .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
-  .project-card {
-    background: #f1f3f5;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  }
-  .project-card h3 {
-    margin-top: 0;
-    font-size: 1.1rem;
-    color: #0d6efd;
-  }
+  .projects { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; }
+  .project-card { background:white; padding:20px; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.08); transition:transform 0.2s, box-shadow 0.2s; }
+  .project-card:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.12); }
+  .project-card h3 { margin-top:0; color:#0d6efd; font-size:1.2rem; }
+  .project-card p { margin-bottom:0; }
 
   /* Contact */
-  .contact {
-    text-align: center;
-    margin-top: 40px;
-    padding: 20px;
-  }
-  .contact p {
-    font-size: 1rem;
+  .contact { text-align:center; padding:40px 20px; background:#0d6efd; color:white; border-radius:20px; }
+  .contact h2 { border-bottom:none; color:white; margin-bottom:20px; }
+  .contact p { font-size:1.1rem; margin:5px 0; }
+
+  /* Responsive tweaks */
+  @media(max-width:600px){
+    .hero h1 { font-size:2rem; }
+    .hero p { font-size:1rem; }
   }
 
-  @media(max-width: 600px){
-    .hero h1 { font-size: 2rem; }
-  }
 </style>
 </head>
 <body>
@@ -117,7 +54,7 @@
   <!-- Hero / Intro -->
   <div class="hero">
     <h1>Independent Laravel / PHP Developer</h1>
-    <p>Fast, reliable web development from bug fixes to full Laravel apps. Text-based communication only.</p>
+    <p>Fast, reliable web development: bug fixes, features, and small-to-medium apps. Text-based communication only. Check my work below.</p>
   </div>
 
   <!-- Skills / What I do -->
@@ -127,18 +64,9 @@
       <li>Laravel development: features, fixes, refactors</li>
       <li>PHP, JavaScript, jQuery debugging</li>
       <li>Small web features, landing pages, portfolios</li>
-      <li>Database queries & optimizations (MySQL / MariaDB)</li>
+      <li>Database queries & optimization (MySQL / MariaDB)</li>
       <li>Project management support in web development</li>
-    </ul>
-  </section>
-
-  <!-- What I don't do -->
-  <section>
-    <h2>What I Don't Do</h2>
-    <ul>
-      <li>Hosting / server management</li>
-      <li>Payment processing or financial integrations</li>
-      <li>Infrastructure / migrations / deployments</li>
+      <li>Bug fixing and troubleshooting legacy code</li>
     </ul>
   </section>
 
@@ -146,14 +74,8 @@
   <section>
     <h2>Tech Stack</h2>
     <div class="tech-badges">
-      <span>Laravel</span>
-      <span>PHP</span>
-      <span>JavaScript</span>
-      <span>jQuery</span>
-      <span>HTML/CSS</span>
-      <span>SQL</span>
-      <span>MariaDB / MySQL</span>
-      <span>Java</span>
+      <span>Laravel</span><span>PHP</span><span>JavaScript</span><span>jQuery</span>
+      <span>HTML/CSS</span><span>SQL</span><span>MariaDB/MySQL</span><span>Java</span>
     </div>
   </section>
 
@@ -162,16 +84,24 @@
     <h2>Sample Projects</h2>
     <div class="projects">
       <div class="project-card">
-        <h3>Bug Fix: Laravel Auth Issue</h3>
-        <p>Fixed session handling and login redirect bug in a legacy Laravel app.</p>
+        <h3>Laravel Auth Bug Fix</h3>
+        <p>Resolved login redirect and session issues in a legacy Laravel app.</p>
       </div>
       <div class="project-card">
         <h3>Portfolio Landing Page</h3>
-        <p>Created responsive landing page for a freelancer, including contact form and CSS animation.</p>
+        <p>Responsive, mobile-first landing page with CSS animations and form validation.</p>
       </div>
       <div class="project-card">
         <h3>SQL Optimization</h3>
-        <p>Improved query performance and reduced load times for MySQL database on small social app.</p>
+        <p>Reduced database query load times by 60% for a small social network app.</p>
+      </div>
+      <div class="project-card">
+        <h3>Bug Fix: jQuery Carousel</h3>
+        <p>Fixed carousel behavior and responsiveness in an existing marketing site.</p>
+      </div>
+      <div class="project-card">
+        <h3>Feature Add: Laravel Blog</h3>
+        <p>Implemented comment moderation and tag filtering for a Laravel blog system.</p>
       </div>
     </div>
   </section>
